@@ -11,7 +11,16 @@
 # <-- imports -->
 
 # <-- vars -->
+final = 0
+dataSource = "./input" # "./example"
 
 # <-- main -->
 
-
+if __name__ == '__main__':
+  with open(dataSource, 'r') as file:
+    for line in file.read().split('\n')[:-1]:
+      numericList = list(filter(str.isdigit, line))
+      print(str(numericList[0]) + str(numericList[-1]) + "   (" + line + ")")
+      final += int((str(numericList[0]) + str(numericList[-1])))
+  print("_____")
+  print(final)
