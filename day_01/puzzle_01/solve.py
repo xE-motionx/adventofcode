@@ -10,6 +10,13 @@
 
 # <-- imports -->
 
+# <-- functions -->
+
+def extractNumericValues(string_in):
+  for character in string_in:
+    print(character)
+
+
 # <-- vars -->
 final = 0
 dataSource = "./input" # "./example"
