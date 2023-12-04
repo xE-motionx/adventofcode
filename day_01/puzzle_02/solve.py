@@ -30,7 +30,6 @@ def extractNumerics(string):
           numericValues += str(index_v)
       if string[index_s:].startswith("teen"):
         numericValues = numericValues[:-1] + "1" + numericValues[-1:]
-  print(numericValues)
   return numericValues[0] + numericValues[-1:]  
 
 # <-- vars -->
