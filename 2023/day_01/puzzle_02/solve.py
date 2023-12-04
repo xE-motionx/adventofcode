@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-############## ## # # # #  #  #        #
+#.:*~*:._.:*~*:._.:*~*:._.:*~*:._.:*~*:._.:*~*:._.:*~*:._.:*~*:._.:*~*:.
 # Author: Frederik Brönner
 # Date: 2023.12.01
 # AOC:  01
@@ -7,7 +7,7 @@
 #   Rows of input. First and last diget meant to form a two-digit number
 #   Identify and combine digits to new value.
 #   However, written digits now count, too. :|
-###### ##  ## # # # # # #     ##   #
+#.:*~*:._.:*~*:._.:*~*:._.:*~*:._.:*~*:._.:*~*:._.:*~*:._.:*~*:._.:*~*:.
 
 # <-- imports -->
 <<<<<<< HEAD
