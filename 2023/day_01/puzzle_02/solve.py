@@ -10,26 +10,6 @@
 #.:*~*:._.:*~*:._.:*~*:._.:*~*:._.:*~*:._.:*~*:._.:*~*:._.:*~*:._.:*~*:.
 
 # <-- imports -->
-<<<<<<< HEAD
-import re
-
-# <-- functions -->
-
-def extractNumericValues(string_in):
-  numerics = ['zero', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine']
-  resolvedNumerics = ""
-  for index, character in enumerate(string_in):
-    if character.isnumeric():
-      resolvedNumerics += character
-    else:
-      print(string_in[index:])
-
-  print("X:" + resolvedNumerics)
-
-# <-- vars -->
-final = 0
-dataSource = "./example"  # "./input" # "./example"
-=======
 
 # <-- functions -->
 
@@ -56,18 +36,13 @@ def extractNumerics(string):
 final = 0
 dataSource = "./input"  # "./input" # "./example"
 
->>>>>>> 2315c37126dbc3708f290a69adbdf5037398694c
 # <-- main -->
 
 if __name__ == '__main__':
   with open(dataSource, 'r') as file:
     for line in file.read().split('\n')[:-1]:
-<<<<<<< HEAD
-      extractNumericValues(line)
-=======
       print(line, end=" | ")
       print(extractNumerics(line))
       final += int(extractNumerics(line))
 
 print("Sum:", final)
->>>>>>> 2315c37126dbc3708f290a69adbdf5037398694c
