@@ -10,22 +10,40 @@
 ###### ##  ## # # # # # #     ##   #
 
 # <-- imports -->
-import re
+
+# <-- functions -->
+
+def extractNumerics(string):
+  numericValues = ""
+  values = ['zero', 'one', 'two', 'three', 
+             'four', 'five', 'six', 'seven', 
+             'eight', 'nine', 'ten', 'eleven', 
+             'twelfe','thirteen']
+  for index_s,char in enumerate(string):
+    numeric = ""
+    if char.isnumeric():
+      numericValues += char
+    else:
+      for index_v,value in enumerate(values):
+        if string[index_s:].startswith(value):
+          numeric = str(index_v)
+          numericValues += str(index_v)
+      if string[index_s:].startswith("teen"):
+        numericValues = numericValues[:-1] + "1" + numericValues[-1:]
+  print(numericValues)
+  return numericValues[0] + numericValues[-1:]  
+
 # <-- vars -->
 final = 0
-dataSource = "./example"  # "./input" # "./example"
-replace = ['zero', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine']
+dataSource = "./input"  # "./input" # "./example"
+
 # <-- main -->
 
 if __name__ == '__main__':
   with open(dataSource, 'r') as file:
     for line in file.read().split('\n')[:-1]:
-      print(line + " > ", end="")
-      for index, entry in enumerate(replace):
-        line = line.replace(entry,str(index))
-      print(line + " > ", end="")
-      numericList = list(filter(str.isdigit, line))
-      print(str(numericList[0]) + str(numericList[-1]))
-      final += int((str(numericList[0]) + str(numericList[-1])))
-  print("_____")
-  print(final)
+      print(line, end=" | ")
+      print(extractNumerics(line))
+      final += int(extractNumerics(line))
+
+print("Sum:", final)
