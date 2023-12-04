@@ -1,2 +1,2 @@
-# adventofcode2023
+# adventofcode
 Advent of code 2023
